@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "AI Typing Beeps (ChatGPT + Replit)",
+  "version": "1.4.0",
+  "description": "Beeps when AI starts/stops generating; chime when you send a prompt. Works on ChatGPT and Replit.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://replit.com/*",
+        "https://*.replit.com/*",
+        "https://*.replit.dev/*",
+        "https://*.replit.app/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}
